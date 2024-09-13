@@ -1,13 +1,52 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'Cursive';
+  src: local('Gistesy'), url('./assets/fonts/Gistesy.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Regular';
+  src: local('Montserrat-Regular'),
+    url('./assets/fonts/Montserrat-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Light';
+  src: local('Montserrat-Light'),
+    url('./assets/fonts/Montserrat-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Medium';
+  src: local('Montserrat-Medium'),
+    url('./assets/fonts/Montserrat-Medium.otf') format('opentype');
+}
+@font-face {
+  font-family: 'SemiBold';
+  src: local('Montserrat-SemiBold'),
+    url('./assets/fonts/Montserrat-SemiBold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Bold';
+  src: local('Montserrat-Bold'),
+    url('./assets/fonts/Montserrat-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Cool';
+  src: local('Holidays-Homework'),
+    url('./assets/fonts/Holidays-Homework.ttf') format('truetype');
 }
