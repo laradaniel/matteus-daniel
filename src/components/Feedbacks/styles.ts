@@ -36,6 +36,11 @@ export const Title = styled.div`
     font-size: 100px;
     height: 130px;
   }
+
+  @media (max-width: 450px) {
+    font-size: 80px;
+    height: 130px;
+  }
 `
 export const Subtitle = styled.div`
   font-family: 'Regular';
@@ -46,21 +51,48 @@ export const Subtitle = styled.div`
   @media (max-width: 920px) {
     font-size: 15px;
   }
+
+  @media (max-width: 450px) {
+    font-size: 13px;
+  }
 `
 
-export const SliderBox = styled(Box)`
+export const SliderBoxDesktop = styled(Box)`
   display: flex;
   height: 330px;
   width: 80%;
 
   align-items: flex-end;
 
+  @media (max-width: 1320px) {
+    height: 250px;
+  }
+
   @media (max-width: 920px) {
-    height: 270px;
+    display: none;
+  }
+`
+
+export const SliderBoxMobile = styled(Box)`
+  display: none;
+
+  @media (max-width: 920px) {
+    display: flex;
+    height: 280px;
+    width: 80%;
+    align-items: flex-end;
   }
 `
 
 export const Image = styled.img`
   width: 340px;
   margin-right: 12px;
+
+  @media (max-width: 1320px) {
+    width: 240px;
+  }
+
+  @media (max-width: 920px) {
+    width: 300px;
+  }
 `

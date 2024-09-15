@@ -22,6 +22,10 @@ export const Box = styled(_Box)`
 
   svg {
     font-size: 65px;
+
+    @media (max-width: 970px) {
+      font-size: 50px;
+    }
   }
 `
 

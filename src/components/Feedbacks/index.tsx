@@ -4,8 +4,9 @@ import {
   TextBox,
   Title,
   Subtitle,
-  SliderBox,
+  SliderBoxDesktop,
   Image,
+  SliderBoxMobile,
 } from './styles'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -32,12 +33,14 @@ const Feedbacks: FC = () => {
         <Title>nossos clientes</Title>
         <Subtitle>
           Transforme seu empreendimento em realidade com a expertise da nossa
-          engenharia! <br />
+          engenharia!
+        </Subtitle>
+        <Subtitle>
           Construa com qualidade, segurança e inovação ao seu lado.
         </Subtitle>
       </TextBox>
 
-      <SliderBox>
+      <SliderBoxDesktop>
         <Swiper
           slidesPerView={1}
           pagination={{ clickable: true }}
@@ -55,7 +58,35 @@ const Feedbacks: FC = () => {
             <Image src={Foto_6} />
           </SwiperSlide>
         </Swiper>
-      </SliderBox>
+      </SliderBoxDesktop>
+
+      <SliderBoxMobile>
+        <Swiper
+          slidesPerView={1}
+          pagination={{ clickable: true }}
+          navigation
+          modules={[Pagination, Navigation, Scrollbar]}
+        >
+          <SwiperSlide style={{ textAlign: 'center' }}>
+            <Image src={Foto_1} />
+          </SwiperSlide>
+          <SwiperSlide style={{ textAlign: 'center' }}>
+            <Image src={Foto_2} />
+          </SwiperSlide>
+          <SwiperSlide style={{ textAlign: 'center' }}>
+            <Image src={Foto_3} />
+          </SwiperSlide>
+          <SwiperSlide style={{ textAlign: 'center' }}>
+            <Image src={Foto_4} />
+          </SwiperSlide>
+          <SwiperSlide style={{ textAlign: 'center' }}>
+            <Image src={Foto_5} />
+          </SwiperSlide>
+          <SwiperSlide style={{ textAlign: 'center' }}>
+            <Image src={Foto_6} />
+          </SwiperSlide>
+        </Swiper>
+      </SliderBoxMobile>
     </BannerContainer>
   )
 }

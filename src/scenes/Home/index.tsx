@@ -5,6 +5,7 @@ import {
   Footer,
   Whatsapp,
   Feedbacks,
+  Budget,
 } from '../../components'
 import {
   MenuContainerDesktop,
@@ -18,9 +19,10 @@ import {
   ButtonMobile,
   BoxCloseMenu,
   BoxIcons,
+  IconMenu,
 } from './styles'
 import { useParams } from 'react-router-dom'
-import { Icone } from '../../assets/images'
+import { Icone, Icone_2 } from '../../assets/images'
 import { Box } from '@mui/material'
 
 const Home: FC = () => {
@@ -56,13 +58,18 @@ const Home: FC = () => {
           <Button onClick={() => navigateTo('about')}>Sobre nós</Button>
           <Button onClick={() => navigateTo('projects')}>Projetos</Button>
           <Button onClick={() => navigateTo('partners')}>Parceiros</Button>
-          <Button onClick={() => navigateTo('')}>Peça seu orçamento</Button>
+          <Button onClick={() => navigateTo('budget')}>
+            Peça seu orçamento
+          </Button>
           <Button onClick={() => navigateTo('contacts')}>Contato</Button>
         </ButtonsDesktopWrapper>
       </MenuContainerDesktop>
 
       <MenuContainerMobile>
-        <BoxIcons>
+        <BoxIcons open={openMenu}>
+          <IconMenu open={openMenu}>
+            <img src={Icone_2} width="9%" />
+          </IconMenu>
           <BoxBurgerMenu open={openMenu} onClick={handleToggle}>
             <IconMenuMobileClosed />
           </BoxBurgerMenu>
@@ -83,7 +90,7 @@ const Home: FC = () => {
           <ButtonMobile onClick={() => navigateTo('partners')}>
             Parceiros
           </ButtonMobile>
-          <ButtonMobile onClick={() => navigateTo('packages')}>
+          <ButtonMobile onClick={() => navigateTo('budget')}>
             Peça seu orçamento
           </ButtonMobile>
           <ButtonMobile onClick={() => navigateTo('contacts')}>
@@ -100,6 +107,9 @@ const Home: FC = () => {
       </div>
       <div id="investments">
         <Investment />
+      </div>
+      <div id="budget">
+        <Budget />
       </div>
       <div id="contacts">
         <Footer />

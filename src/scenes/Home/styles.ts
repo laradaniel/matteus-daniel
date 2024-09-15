@@ -32,7 +32,7 @@ export const MenuContainerMobile = styled(Box)`
     display: flex;
     background-color: ${secondaryColor};
     width: 100%;
-    justify-content: center;
+    justify-content: space-between
     align-items: flex-end;
     position: fixed;
     z-index: 10;
@@ -88,6 +88,17 @@ export const IconMenuMobileOpen = styled(CloseIcon)`
   }
 `
 
+export const IconMenu = styled(Box)<MenuProps>`
+  display: flex;
+  margin-left: 10px;
+
+  ${({ open }) =>
+    open &&
+    css`
+      display: none;
+    `}
+`
+
 export const BoxBurgerMenu = styled(Box)<MenuProps>`
   display: flex;
 
@@ -108,16 +119,25 @@ export const BoxCloseMenu = styled(Box)<MenuProps>`
     `}
 `
 
-export const BoxIcons = styled(Box)`
+export const BoxIcons = styled(Box)<MenuProps>`
   display: flex;
   height: 45px;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  ${({ open }) =>
+    open &&
+    css`
+      justify-content: end;
+    `}
 `
 
 export const ButtonsMobileWrapper = styled(Box)`
   width: 100%;
   align-items: flex-end;
   flex-direction: column;
+  justify-content: space-between;
 `
 
 export const Button = styled(_Button).attrs({

@@ -43,6 +43,10 @@ export const Title = styled.div`
   @media (max-width: 920px) {
     text-align: center;
   }
+
+  @media (max-width: 520px) {
+    font-size: 40px;
+  }
 `
 
 export const Subtitle = styled.div`
@@ -56,6 +60,10 @@ export const Subtitle = styled.div`
   @media (max-width: 920px) {
     justify-content: center;
     font-size: 52px;
+  }
+
+  @media (max-width: 520px) {
+    font-size: 45px;
   }
 `
 
@@ -86,4 +94,8 @@ export const BoxLogo = styled(Box)`
 
 export const Image = styled.img`
   width: 400px;
+
+  @media (max-width: 920px) {
+    width: 200px;
+  }
 `
